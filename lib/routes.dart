@@ -1,5 +1,5 @@
-import 'package:bubblesmapper_web/privacy.dart';
-import 'package:bubblesmapper_web/terms.dart';
+import 'package:bubblesmapper_web/bubbles/privacy.dart';
+import 'package:bubblesmapper_web/bubbles/terms.dart';
 import 'package:flutter/cupertino.dart';
 
 class Routes {

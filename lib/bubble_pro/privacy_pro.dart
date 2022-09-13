@@ -1,17 +1,19 @@
-import 'package:bubblesmapper_web/page_route_transition.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import 'dart:io';
 
-class PrivacyScreen extends StatefulWidget {
+import 'package:get/get.dart';
+
+class PrivacyProScreen extends StatefulWidget {
   static const id = '/privacy';
-  const PrivacyScreen({Key? key}) : super(key: key);
+  const PrivacyProScreen({Key? key}) : super(key: key);
 
   @override
-  _PrivacyScreenState createState() => _PrivacyScreenState();
+  _PrivacyProScreenState createState() => _PrivacyProScreenState();
 }
 
-class _PrivacyScreenState extends State<PrivacyScreen> {
+class _PrivacyProScreenState extends State<PrivacyProScreen> {
   final String title = 'Privacy policy';
   Future<String>? data;
 
@@ -28,16 +30,19 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
   @override
   Widget build(BuildContext context) {
     data ??= loadAsset(context);
-
+    bool isPhone = context.isPhone;
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
+      appBar: isPhone
+          ? null
+          : AppBar(
+              title: Text(title),
+              backgroundColor: const Color(0XFFE91E63),
+            ),
       body: Container(
-        color: Colors.cyan,
+        color: const Color(0XFFE91E63),
         child: Row(
           children: [
-            Flexible(flex: 1, child: Container()),
+            isPhone ? Container() : Flexible(flex: 1, child: Container()),
             Expanded(
               flex: 4,
               child: SingleChildScrollView(
@@ -55,7 +60,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                                 const Text(
                                   'BUBBLESMAPPER PRIVACY POLICY',
                                   style: TextStyle(
-                                      color: Colors.cyan,
+                                      color: Color(0XFFE91E63),
                                       fontWeight: FontWeight.bold,
                                       fontSize: 24),
                                 ),
@@ -65,13 +70,16 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                             ),
                           );
                         } else {
-                          return const Text('Loading Privacy Policy...');
+                          return const Text('Loading Privacy Policy...',
+                              style: TextStyle(
+                                  color: Color(0XFFE91E63),
+                                  backgroundColor: Color(0XFFE91E63)));
                         }
                       }),
                 )),
               ),
             ),
-            Flexible(flex: 1, child: Container()),
+            isPhone ? Container() : Flexible(flex: 1, child: Container()),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
