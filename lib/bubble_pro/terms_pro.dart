@@ -72,7 +72,7 @@ class _TermsProScreenState extends State<TermsProScreen> {
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                backgroundColor: Colors.transparent),
+                                backgroundColor: Color(0XFFE91E63)),
                           );
                         }
                       }),
