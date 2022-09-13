@@ -69,11 +69,13 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                             ),
                           );
                         } else {
-                          return const Text('Loading Privacy Policy...',
-                              style: TextStyle(
+                          return const Text(
+                            'Loading Privacy Policy...',
+                            /* style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  backgroundColor: Colors.cyan));
+                                  backgroundColor: Colors.cyan)*/
+                          );
                         }
                       }),
                 )),
