@@ -67,7 +67,8 @@ class _TermsScreenState extends State<TermsScreen> {
                         } else {
                           return const Text('Loading Terms of Service...',
                               style: TextStyle(
-                                  color: Colors.cyan,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
                                   backgroundColor: Colors.cyan));
                         }
                       }),

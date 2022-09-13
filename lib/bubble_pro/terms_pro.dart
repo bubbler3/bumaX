@@ -70,7 +70,8 @@ class _TermsProScreenState extends State<TermsProScreen> {
                           return const Text(
                             'Loading Terms of Service...',
                             style: TextStyle(
-                                color: Color(0XFFE91E63),
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
                                 backgroundColor: Colors.transparent),
                           );
                         }

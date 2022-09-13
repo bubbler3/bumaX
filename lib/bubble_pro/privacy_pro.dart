@@ -72,7 +72,8 @@ class _PrivacyProScreenState extends State<PrivacyProScreen> {
                         } else {
                           return const Text('Loading Privacy Policy...',
                               style: TextStyle(
-                                  color: Color(0XFFE91E63),
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
                                   backgroundColor: Color(0XFFE91E63)));
                         }
                       }),
